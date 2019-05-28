@@ -1,22 +1,23 @@
 package org.pablopj.cleanarchsample.application.usecase.keyword;
 
+import java.util.List;
+
 import org.pablopj.cleanarchsample.application.usecase.UseCase;
-import org.pablopj.cleanarchsample.application.usecase.keyword.param.CreateKeywordParam;
+import org.pablopj.cleanarchsample.application.usecase.UseCaseParam;
 import org.pablopj.cleanarchsample.domain.model.KeywordDTO;
 import org.pablopj.cleanarchsample.domain.service.KeywordService;
 
-public class CreateKeyword implements UseCase<CreateKeywordParam> {
-	
+public class GetAllKeyword implements UseCase<UseCaseParam> {
+
 	public KeywordService keywordService;
 	
-	public CreateKeyword(KeywordService keywordService) {
+	public GetAllKeyword(KeywordService keywordService) {
 		this.keywordService = keywordService;
 	}
 	
 	@Override
-	public KeywordDTO execute(CreateKeywordParam param) {
-		//some business logic
-		return keywordService.insert(param.getKeyword());
+	public List<KeywordDTO> execute(UseCaseParam param) {
+		return keywordService.getAll();
 	}
 
 }
