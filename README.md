@@ -15,3 +15,13 @@ This module implements everything outside the business logic and will have a dep
 
 ### boot
 In this module declare the boot class of the application.
+
+![Hexagonal architecture](docs/hexagonal-architecture-1.png)
+
+Flow below:
+
+![Hexagonal architecture](docs/hexagonal-architecture-2.png)
+
+Example below:
+
+![Hexagonal architecture](docs/hexagonal-architecture-3.png)
